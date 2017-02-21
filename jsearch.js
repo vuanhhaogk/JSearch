@@ -66,5 +66,6 @@ JSearch.Env.prototype.run = function(mode){
         if (this.engines[i].mode.indexOf(mode) !== -1)
             this.engines[i].handler.bind(this.engines[i])(this.inp.value, mode);
         else
-            this.engines[i].html('');
+            if (this.engines[i].mode.indexOf(1) !== -1)
+                this.engines[i].html('')
 }
